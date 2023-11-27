@@ -1,0 +1,29 @@
+﻿@page
+@model MicrosoftIdentity_Learning.Pages.HR.HRManagementModel
+@{
+}
+<div><h1>Hello, HR Manager!</h1></div>
+
+<div>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Temp C</th>
+                <th>Temp F</th>
+                <th>Summary</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var item in Model.weatherForecastsItems)
+            {
+                <tr>
+                    <td>@item.Date.ToLongDateString()</td>
+                    <td>@item.TemperatureC</td>
+                    <td>@item.TemperatureF</td>
+                    <td>@item.Summary</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
